@@ -1,0 +1,45 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+body {
+    color: white;
+    font-family: Livvic, sans-serif;
+}
+
+a {
+    all: unset;
+    cursor: pointer;
+}
+
+.container {
+    margin: auto;
+    padding-inline: 20px;
+
+    /* Small */
+    @media (min-width: 768px) {
+        & {
+            width: 750px;
+        }
+    }
+
+    /* Medium */
+    @media (min-width: 992px) {
+        & {
+            width: 970px;
+        }
+    }
+
+    /* Large */
+    @media (min-width: 1200px) {
+        & {
+            width: 1170px;
+        }
+    }
+}
