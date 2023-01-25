@@ -13,7 +13,7 @@
     }
 }
 
-@mixin floating-image($url, $directions, $translate: 0 0, $width, $height) {
+@mixin floating-image($url, $directions, $translate, $width, $height) {
     content: '';
     position: absolute;
     background: url($url);

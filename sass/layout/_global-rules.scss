@@ -1,3 +1,5 @@
+@use '../helpers/variables' as *;
+
 *,
 ::before,
 ::after {
@@ -42,4 +44,8 @@ a {
             width: 1170px;
         }
     }
+}
+
+.orange {
+    color: $orange;
 }

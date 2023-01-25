@@ -1,0 +1,83 @@
+@use '../helpers/mixins' as *;
+@use '../helpers/variables' as *;
+
+main {
+    isolation: isolate;
+    background-color: $green;
+    padding-bottom: 120px;
+    height: 480px + 120px;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .container {
+        display: grid;
+        grid-template-columns: 5.75fr 4.25fr;
+        align-items: center;
+        gap: 60px;
+
+        h1 {
+            line-height: 1;
+            margin: 0;
+            font-size: clamp(45px, 7vw, 100px);
+        }
+
+        p {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 1.5;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                height: 3px;
+                width: 50px;
+                left: 0;
+                top: -35px;
+                background-color: #79c8c7;
+            }
+        }
+
+    }
+    
+    &::after {
+        @include floating-image("/images/patterns/pattern2.svg", ("bottom": 0, "right": 8vw), 0, 358px, 100px);
+    }
+
+    &::before {
+        z-index: -1;
+        @include floating-image("/images/patterns/pattern3.svg", ("top": 50%, "left": 0), -50% calc(-50% - 95.55px / 2) , 200px, 200px);
+    }
+
+    @media (width <= 800px) {
+        & {
+            height: clamp(430px, 70vh, 520px);
+        }
+
+        &::after {
+            right: 50%;
+            translate: 50%;
+        }
+
+        &::before {
+            content: none;
+        }
+
+        .container {
+            grid-template-columns: 1fr;
+            gap: 20px;
+            text-align: center;
+        }
+
+        p {
+            margin: auto;
+            max-width: 500px;
+            font-size: 16px !important;
+
+            &::before {
+                content: none !important;
+            }
+        }
+    }
+}
