@@ -41,7 +41,7 @@ main {
 
     &::before {
         z-index: -1;
-        @include floating-image("../images/patterns/pattern3.svg", ("top": 50%, "left": 0), -50% calc(-50% - 95.55px / 2) , 200px, 200px);
+        @include floating-image("../images/patterns/pattern3.svg", ("top": 50%, "left": 0), -50% calc(-50% - $header-height / 2) , 200px, 200px);
     }
 
     @media (width <= 800px) {
