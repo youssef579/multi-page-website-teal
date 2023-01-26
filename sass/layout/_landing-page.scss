@@ -29,13 +29,7 @@ main {
             position: relative;
 
             &::before {
-                content: '';
-                position: absolute;
-                height: 3px;
-                width: 50px;
-                left: 0;
-                top: -35px;
-                background-color: #79c8c7;
+                @include line(#79c8c7, ("left": 0, "top": -35px));
             }
         }
 

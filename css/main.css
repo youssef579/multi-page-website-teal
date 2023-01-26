@@ -80,6 +80,7 @@ header .container .menu div:nth-child(3) {
   top: 14px;
 }
 header .container nav {
+  z-index: 999;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -197,11 +198,11 @@ main .container p {
 main .container p::before {
   content: "";
   position: absolute;
-  height: 3px;
+  background-color: #79c8c7;
   width: 50px;
+  height: 3px;
   left: 0;
   top: -35px;
-  background-color: #79c8c7;
 }
 main::after {
   content: "";
@@ -247,5 +248,79 @@ main::before {
   }
   main p::before {
     content: none !important;
+  }
+}
+
+.advantages {
+  isolation: isolate;
+  overflow-x: hidden;
+  position: relative;
+  background-color: #012f34;
+  padding-block: 115px 80px;
+}
+.advantages .container {
+  display: grid;
+  grid-template-columns: 0.9fr 1fr;
+  gap: 80px;
+}
+.advantages .container h1 {
+  font-size: clamp(28px, 5vw, 47px);
+  position: relative;
+}
+.advantages .container h1::before {
+  content: "";
+  position: absolute;
+  background-color: #f67e7e;
+  width: 50px;
+  height: 3px;
+  left: 0;
+  top: -35px;
+}
+.advantages .container .content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.advantages .container .content .box {
+  display: flex;
+  gap: 25px;
+}
+.advantages .container .content .box h3 {
+  font-size: 17px;
+}
+.advantages .container .content .box p {
+  opacity: 0.8;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-top: 18px;
+}
+.advantages::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  background: url("/images/patterns/pattern4.svg");
+  width: 200px;
+  height: 244px;
+  translate: 50%;
+  bottom: 0;
+  right: 0;
+}
+@media (width <= 798px) {
+  .advantages::before {
+    top: 0;
+  }
+  .advantages .container {
+    max-width: 600px;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .advantages .container h1 {
+    max-width: calc(100vw - 148px);
+  }
+}
+@media (width <= 480px) {
+  .advantages .box {
+    flex-direction: column;
+    text-align: center;
   }
 }/*# sourceMappingURL=main.css.map */

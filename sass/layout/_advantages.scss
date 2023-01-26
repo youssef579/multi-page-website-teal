@@ -1,0 +1,76 @@
+@use '../helpers/mixins' as *;
+@use '../helpers/variables' as *;
+
+.advantages {
+    isolation: isolate;
+    overflow-x: hidden;
+    position: relative;
+    background-color: $darker-green;
+    padding-block: 80px + 35px 80px;
+
+    .container {
+        display: grid;
+        grid-template-columns: 0.9fr 1fr;
+        gap: 80px;
+
+        h1 {
+            font-size: clamp(28px, 5vw, 47px);
+            position: relative;
+
+            &::before {
+                @include line($orange, ("left": 0, "top": -35px));
+            }
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+
+            .box {
+                display: flex;
+                gap: 25px;
+
+                h3 {
+                    font-size: 17px;
+                }
+
+                p {
+                    opacity: 0.8;
+                    font-weight: 600;
+                    line-height: 1.5;
+                    margin-top: 18px;
+                }
+            }
+        }
+
+    }
+    
+    &::before {
+        z-index: -1;
+        @include floating-image("/images/patterns/pattern4.svg", ("bottom": 0, "right": 0), 50%, 200px, 244px);
+    }
+
+    @media (width <= 798px) {
+        &::before {
+            top: 0;
+        }
+        
+        .container {
+            h1 {
+                max-width: calc(100vw - 148px);
+            }
+
+            max-width: 600px;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+
+    @media (width <= 480px) {
+        .box {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+}
