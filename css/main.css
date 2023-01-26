@@ -118,7 +118,9 @@ header .container nav a:hover {
   color: #f67e7e;
 }
 header .container nav a:last-child {
-  font-size: 17px;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
   margin-left: 15px;
   border-radius: 24px;
   padding: 11px 30px;
@@ -322,5 +324,55 @@ main::before {
   .advantages .box {
     flex-direction: column;
     text-align: center;
+  }
+}
+
+.banner {
+  isolation: isolate;
+  background-color: #f67e7e;
+  color: #012f34;
+  padding-block: 50px;
+  position: relative;
+}
+.banner .container {
+  max-width: 950px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+.banner .container h1 {
+  font-size: clamp(25px, 6vw, 47px);
+}
+.banner .container a {
+  color: #012f34;
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 15px;
+  border-radius: 24px;
+  padding: 11px 30px;
+  border: 2px solid #012f34;
+  transition-property: background-color, color;
+  transition-duration: 0.3s;
+}
+.banner .container a:hover {
+  background-color: #012f34;
+  color: white;
+}
+.banner::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  background: url("/images/patterns/pattern5.svg");
+  width: 200px;
+  height: 144px;
+  translate: 0;
+  bottom: 0;
+  left: 0;
+}
+@media (width <= 656px) {
+  .banner .container {
+    justify-content: center;
   }
 }/*# sourceMappingURL=main.css.map */

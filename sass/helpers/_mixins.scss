@@ -1,3 +1,5 @@
+@use '../helpers/variables' as *;
+
 @mixin lines($pos) {
     display: none;
     width: 20px;
@@ -37,5 +39,22 @@
     @each $direction,
     $value in $directions {
         #{$direction}: $value;
+    }
+}
+
+@mixin contact-btn($clr1, $clr2) {
+    color: $clr1;
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 15px;
+    border-radius: 24px;
+    padding: 11px 30px;
+    border: 2px solid $clr1;
+    transition-property: background-color, color;
+    transition-duration: $duration;
+
+    &:hover {
+        background-color: $clr1;
+        color: $clr2;
     }
 }
