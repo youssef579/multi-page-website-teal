@@ -41,8 +41,16 @@ a {
   }
 }
 
+section, main {
+  position: relative;
+}
+
 .orange {
   color: #f67e7e;
+}
+
+.blue {
+  color: #79c8c7;
 }
 
 header {
@@ -162,7 +170,7 @@ header .container nav a:last-child:hover {
   header .container nav::before {
     content: "";
     position: absolute;
-    background: url("/images/patterns/pattern1.svg");
+    background-image: url("/images/patterns/pattern1.svg");
     width: 200px;
     height: 200px;
     translate: 50%;
@@ -172,13 +180,13 @@ header .container nav a:last-child:hover {
 }
 
 main {
+  overflow-x: hidden;
   isolation: isolate;
   background-color: #014e56;
   padding-bottom: 120px;
   height: 600px;
   display: flex;
   align-items: center;
-  position: relative;
 }
 main .container {
   display: grid;
@@ -209,7 +217,7 @@ main .container p::before {
 main::after {
   content: "";
   position: absolute;
-  background: url("/images/patterns/pattern2.svg");
+  background-image: url("/images/patterns/pattern2.svg");
   width: 358px;
   height: 100px;
   translate: 0;
@@ -220,7 +228,7 @@ main::before {
   z-index: -1;
   content: "";
   position: absolute;
-  background: url("/images/patterns/pattern3.svg");
+  background-image: url("/images/patterns/pattern3.svg");
   width: 200px;
   height: 200px;
   translate: -50% calc(-50% - 47.775px);
@@ -256,14 +264,13 @@ main::before {
 .advantages {
   isolation: isolate;
   overflow-x: hidden;
-  position: relative;
   background-color: #012f34;
-  padding-block: 115px 80px;
+  padding-block: 165px 130px;
 }
 .advantages .container {
   display: grid;
   grid-template-columns: 0.9fr 1fr;
-  gap: 80px;
+  gap: 90px;
 }
 .advantages .container h1 {
   font-size: clamp(28px, 5vw, 47px);
@@ -293,14 +300,14 @@ main::before {
 .advantages .container .content .box p {
   opacity: 0.8;
   font-weight: 600;
-  line-height: 1.5;
+  line-height: 1.7;
   margin-top: 18px;
 }
 .advantages::before {
   z-index: -1;
   content: "";
   position: absolute;
-  background: url("/images/patterns/pattern4.svg");
+  background-image: url("/images/patterns/pattern4.svg");
   width: 200px;
   height: 244px;
   translate: 50%;
@@ -308,6 +315,9 @@ main::before {
   right: 0;
 }
 @media (width <= 798px) {
+  .advantages {
+    padding-block: 105px 70px;
+  }
   .advantages::before {
     top: 0;
   }
@@ -321,6 +331,9 @@ main::before {
   }
 }
 @media (width <= 480px) {
+  .advantages {
+    padding-block: 75px 40px;
+  }
   .advantages .box {
     flex-direction: column;
     text-align: center;
@@ -332,7 +345,6 @@ main::before {
   background-color: #f67e7e;
   color: #012f34;
   padding-block: 50px;
-  position: relative;
 }
 .banner .container {
   max-width: 950px;
@@ -364,7 +376,7 @@ main::before {
   z-index: -1;
   content: "";
   position: absolute;
-  background: url("/images/patterns/pattern5.svg");
+  background-image: url("/images/patterns/pattern5.svg");
   width: 200px;
   height: 144px;
   translate: 0;
@@ -375,4 +387,76 @@ main::before {
   .banner .container {
     justify-content: center;
   }
+}
+
+.stories {
+  background-color: #004047;
+  padding-block: 130px 120px;
+}
+.stories .container h1 {
+  font-size: clamp(28px, 4.5vw, 47px);
+  max-width: 900px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 80px;
+}
+.stories .container .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 60px 30px;
+  text-align: center;
+}
+.stories .container .content .box {
+  isolation: isolate;
+  position: relative;
+}
+.stories .container .content .box q {
+  font-weight: 600;
+  line-height: 1.5;
+}
+.stories .container .content .box .name {
+  margin-block: 25px 6px;
+  font-size: 18px;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.stories .container .content .box .job {
+  font-weight: 500;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+.stories .container .content .box img {
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.stories .container .content .box::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  background-image: url("/images/quotes.svg");
+  width: 67px;
+  height: 56px;
+  translate: -50% 22px;
+  left: 50%;
+  bottom: 100%;
+}
+.stories::before {
+  content: "";
+  position: absolute;
+  background-image: url("/images/patterns/pattern6.svg");
+  width: 147px;
+  height: 100px;
+  translate: 0;
+  top: 0;
+  left: 0;
+}
+.stories::after {
+  content: "";
+  position: absolute;
+  background-image: url("/images/patterns/pattern7.svg");
+  width: 200px;
+  height: 100px;
+  translate: 0;
+  bottom: 0;
+  right: 0;
 }/*# sourceMappingURL=main.css.map */

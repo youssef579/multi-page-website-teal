@@ -1,0 +1,65 @@
+@use '../helpers/mixins' as *;
+@use '../helpers/variables' as *;
+
+.stories {
+    background-color: $dark-green;
+    padding-block: 130px 120px;
+
+    .container {
+        h1 {
+            font-size: clamp(28px, 4.5vw, 47px);
+            max-width: 900px;
+            text-align: center;
+            margin: auto;
+            margin-bottom: 80px;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 60px 30px;
+            text-align: center;
+            
+            .box {
+                isolation: isolate;
+                position: relative;
+
+                q {
+                    font-weight: 600;
+                    line-height: 1.5;
+                }
+
+                .name {
+                    margin-block: 25px 6px;
+                    font-size: 18px;
+                    text-transform: capitalize;
+                    font-weight: bold;
+                }
+
+                .job {
+                    font-weight: 500;
+                    font-size: 13px;
+                    margin-bottom: 20px;
+                }
+
+                img {
+                    border-radius: 50%;
+                    border: 2px solid white;
+                }
+
+                &::before {
+                    z-index: -1;
+                    @include floating-image("/images/quotes.svg", ("left": 50%, "bottom": 100%), -50% 22px, 67px, 56px);
+                }
+            }
+        }
+    }
+
+    &::before {
+        @include floating-image("/images/patterns/pattern6.svg", ("top": 0, "left": 0), 0, 147px, 100px);
+    }
+
+    &::after {
+        @include floating-image("/images/patterns/pattern7.svg", ("bottom": 0, "right": 0), 0, 200px, 100px);
+    }
+}

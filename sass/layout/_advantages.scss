@@ -4,14 +4,13 @@
 .advantages {
     isolation: isolate;
     overflow-x: hidden;
-    position: relative;
     background-color: $darker-green;
-    padding-block: 80px + 35px 80px;
+    padding-block: 130px + 35px 130px;
 
     .container {
         display: grid;
         grid-template-columns: 0.9fr 1fr;
-        gap: 80px;
+        gap: 90px;
 
         h1 {
             font-size: clamp(28px, 5vw, 47px);
@@ -38,24 +37,28 @@
                 p {
                     opacity: 0.8;
                     font-weight: 600;
-                    line-height: 1.5;
+                    line-height: 1.7;
                     margin-top: 18px;
                 }
             }
         }
 
     }
-    
+
     &::before {
         z-index: -1;
         @include floating-image("/images/patterns/pattern4.svg", ("bottom": 0, "right": 0), 50%, 200px, 244px);
     }
 
-    @media (width <= 798px) {
+    @media (width <=798px) {
+        & {
+            padding-block: 70px + 35px 70px;
+        }
+
         &::before {
             top: 0;
         }
-        
+
         .container {
             h1 {
                 max-width: calc(100vw - 148px);
@@ -67,7 +70,11 @@
         }
     }
 
-    @media (width <= 480px) {
+    @media (width <=480px) {
+        & {
+            padding-block: 40px + 35px 40px;
+        }
+
         .box {
             flex-direction: column;
             text-align: center;

@@ -2,13 +2,13 @@
 @use '../helpers/variables' as *;
 
 main {
+    overflow-x: hidden;
     isolation: isolate;
     background-color: $green;
     padding-bottom: 120px;
     height: 480px + 120px;
     display: flex;
     align-items: center;
-    position: relative;
 
     .container {
         display: grid;

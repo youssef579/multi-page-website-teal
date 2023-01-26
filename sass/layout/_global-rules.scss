@@ -46,6 +46,14 @@ a {
     }
 }
 
+section, main {
+    position: relative;
+}
+
 .orange {
     color: $orange;
+}
+
+.blue {
+    color: $blue;
 }
