@@ -47,7 +47,7 @@
 
     &::before {
         z-index: -1;
-        @include floating-image("/images/patterns/pattern4.svg", ("bottom": 0, "right": 0), 50%, 200px, 244px);
+        @include floating-image("../images/patterns/pattern4.svg", ("bottom": 0, "right": 0), 50%, 200px, 244px);
     }
 
     @media (width <=798px) {

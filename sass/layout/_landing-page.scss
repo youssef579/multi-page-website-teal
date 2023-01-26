@@ -36,12 +36,12 @@ main {
     }
     
     &::after {
-        @include floating-image("/images/patterns/pattern2.svg", ("bottom": 0, "right": 8vw), 0, 358px, 100px);
+        @include floating-image("../images/patterns/pattern2.svg", ("bottom": 0, "right": 8vw), 0, 358px, 100px);
     }
 
     &::before {
         z-index: -1;
-        @include floating-image("/images/patterns/pattern3.svg", ("top": 50%, "left": 0), -50% calc(-50% - 95.55px / 2) , 200px, 200px);
+        @include floating-image("../images/patterns/pattern3.svg", ("top": 50%, "left": 0), -50% calc(-50% - 95.55px / 2) , 200px, 200px);
     }
 
     @media (width <= 800px) {

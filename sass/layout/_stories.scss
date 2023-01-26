@@ -49,17 +49,17 @@
 
                 &::before {
                     z-index: -1;
-                    @include floating-image("/images/quotes.svg", ("left": 50%, "bottom": 100%), -50% 22px, 67px, 56px);
+                    @include floating-image("../images/quotes.svg", ("left": 50%, "bottom": 100%), -50% 22px, 67px, 56px);
                 }
             }
         }
     }
 
     &::before {
-        @include floating-image("/images/patterns/pattern6.svg", ("top": 0, "left": 0), 0, 147px, 100px);
+        @include floating-image("../images/patterns/pattern6.svg", ("top": 0, "left": 0), 0, 147px, 100px);
     }
 
     &::after {
-        @include floating-image("/images/patterns/pattern7.svg", ("bottom": 0, "right": 0), 0, 200px, 100px);
+        @include floating-image("../images/patterns/pattern7.svg", ("bottom": 0, "right": 0), 0, 200px, 100px);
     }
 }

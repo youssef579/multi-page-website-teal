@@ -9,6 +9,7 @@
 }
 
 body {
+  background-color: #014e56;
   color: white;
   font-family: Livvic, sans-serif;
 }
@@ -174,7 +175,7 @@ header .container nav a:last-child:hover {
   header .container nav::before {
     content: "";
     position: absolute;
-    background-image: url("/images/patterns/pattern1.svg");
+    background-image: url("../images/patterns/pattern1.svg");
     width: 200px;
     height: 200px;
     translate: 50%;
@@ -221,7 +222,7 @@ main .container p::before {
 main::after {
   content: "";
   position: absolute;
-  background-image: url("/images/patterns/pattern2.svg");
+  background-image: url("../images/patterns/pattern2.svg");
   width: 358px;
   height: 100px;
   translate: 0;
@@ -232,7 +233,7 @@ main::before {
   z-index: -1;
   content: "";
   position: absolute;
-  background-image: url("/images/patterns/pattern3.svg");
+  background-image: url("../images/patterns/pattern3.svg");
   width: 200px;
   height: 200px;
   translate: -50% calc(-50% - 47.775px);
@@ -311,7 +312,7 @@ main::before {
   z-index: -1;
   content: "";
   position: absolute;
-  background-image: url("/images/patterns/pattern4.svg");
+  background-image: url("../images/patterns/pattern4.svg");
   width: 200px;
   height: 244px;
   translate: 50%;
@@ -349,6 +350,7 @@ main::before {
   background-color: #f67e7e;
   color: #012f34;
   padding-block: 50px;
+  position: relative;
 }
 .banner .container {
   max-width: 950px;
@@ -380,7 +382,7 @@ main::before {
   z-index: -1;
   content: "";
   position: absolute;
-  background-image: url("/images/patterns/pattern5.svg");
+  background-image: url("../images/patterns/pattern5.svg");
   width: 200px;
   height: 144px;
   translate: 0;
@@ -437,7 +439,7 @@ main::before {
   z-index: -1;
   content: "";
   position: absolute;
-  background-image: url("/images/quotes.svg");
+  background-image: url("../images/quotes.svg");
   width: 67px;
   height: 56px;
   translate: -50% 22px;
@@ -447,7 +449,7 @@ main::before {
 .stories::before {
   content: "";
   position: absolute;
-  background-image: url("/images/patterns/pattern6.svg");
+  background-image: url("../images/patterns/pattern6.svg");
   width: 147px;
   height: 100px;
   translate: 0;
@@ -457,7 +459,7 @@ main::before {
 .stories::after {
   content: "";
   position: absolute;
-  background-image: url("/images/patterns/pattern7.svg");
+  background-image: url("../images/patterns/pattern7.svg");
   width: 200px;
   height: 100px;
   translate: 0;

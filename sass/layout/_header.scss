@@ -97,7 +97,7 @@ header {
                 }
 
                 &::before {
-                    @include floating-image("/images/patterns/pattern1.svg", ("bottom": 0, "right": 0), 50%, 200px, 200px);
+                    @include floating-image("../images/patterns/pattern1.svg", ("bottom": 0, "right": 0), 50%, 200px, 200px);
                 }
             }
         }
