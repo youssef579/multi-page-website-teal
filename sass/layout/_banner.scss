@@ -6,7 +6,6 @@
     background-color: $orange;
     color: $darker-green;
     padding-block: 50px;
-    position: relative;
 
     .container {
         max-width: 950px;
@@ -26,7 +25,6 @@
     }
 
     &::before {
-        z-index: -1;
         @include floating-image("../images/patterns/pattern5.svg", ("bottom": 0, "left": 0), 0, 200px, 144px);
     }
 

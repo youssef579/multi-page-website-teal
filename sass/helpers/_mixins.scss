@@ -30,6 +30,7 @@
 
 @mixin floating-image($url, $directions, $translate, $width, $height) {
     content: '';
+    z-index: -1;
     position: absolute;
     background-image: url($url);
     width: $width;

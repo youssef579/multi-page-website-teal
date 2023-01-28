@@ -48,7 +48,6 @@
                 }
 
                 &::before {
-                    z-index: -1;
                     @include floating-image("../images/quotes.svg", ("left": 50%, "bottom": 100%), -50% 22px, 67px, 56px);
                 }
             }

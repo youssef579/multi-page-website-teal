@@ -4,9 +4,7 @@
 section.contact {
     background-color: $green;
     padding-block: 50px 130px;
-    position: relative;
     overflow-x: hidden;
-    isolation: isolate;
 
     .container {
         display: grid;
@@ -90,12 +88,10 @@ section.contact {
     }
 
     &::before {
-        z-index: -1;
         @include floating-image("../images/patterns/pattern8.svg", ("bottom": 0, "right": 0), 50%, 201px, 225px);
     }
 
     &::after {
-        z-index: -1;
         @include floating-image("../images/patterns/pattern9.svg", ("top": 50%, "left": 0), -50% calc(-50% - $header-height / 2), 200px, 200px);
 
         @media (width <= 750px) {

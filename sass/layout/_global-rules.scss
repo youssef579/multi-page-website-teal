@@ -10,6 +10,10 @@
     -moz-box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: $green;
     color: white;
@@ -53,6 +57,7 @@ ul {
 
 section, main {
     position: relative;
+    isolation: isolate;
 }
 
 .orange {

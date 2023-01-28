@@ -1,0 +1,140 @@
+@use '../helpers/mixins' as *;
+@use '../helpers/variables' as *;
+
+.directors {
+    background-color: $dark-green;
+    padding-block: 80px 170px;
+    overflow: hidden;
+
+    .container {
+        h1 {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: clamp(30px, 7vw, 48px);
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-auto-rows: 240px;
+            gap: 70px 30px;
+            perspective: 8000px;
+            
+            .box {
+                background-color: $darker-green;
+                text-align: center;
+                position: relative;
+                transform-style: preserve-3d;
+                transition: transform 1s;
+
+                .front,
+                .back {
+                    backface-visibility: hidden;
+                    padding-block: 40px 60px;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+
+                    button {
+                        all: unset;
+                        display: grid;
+                        place-content: center;
+                        cursor: pointer;
+                        background-color: $orange;
+                        border-radius: 50%;
+                        width: 55px;
+                        aspect-ratio: 1 / 1;
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        translate: -50% 50%;
+                        transition: background-color $duration;
+
+                        svg {
+                            scale: 0.9;
+                        }
+
+                        &:hover {
+                            background-color: $blue;
+                        }
+                    }
+
+                    .name {
+                        font-size: 18px;
+                        text-transform: capitalize;
+                        margin-block: 25px 7px;
+                    }
+                }
+
+                .front {
+                    img {
+                        scale: 1.4;
+                        border-radius: 100%;
+                        border: 2px solid white;
+                    }
+
+
+                    .job {
+                        font-weight: 500;
+                        font-size: 15px;
+                    }
+
+                }
+
+                .back {
+                    background-color: $darkest-green;
+                    transform: rotateY(180deg);
+                    padding-inline: 10px;
+
+                    .name {
+                        margin-block: 0 15px;
+                    }
+
+                    q {
+                        display: block;
+                        margin: auto;
+                        max-width: 250px;
+                        font-weight: 600;
+                        line-height: 1.6;
+                        
+                    }
+
+                    ul {
+                        margin-top: 17px;
+                        display: flex;
+                        justify-content: center;
+                        gap: 20px;
+
+                        path {
+                            transition: fill $duration;
+                        }
+
+                        li:hover path {
+                            fill: $orange;
+                        }
+                    }
+
+                    button {
+                        rotate: 45deg;
+                    }
+                }
+            }
+        }
+    }
+
+    &::after {
+        @include floating-image("../images/patterns/pattern12.svg", ("bottom": 0, "right": 0), 0, 147px, 100px);
+    }
+
+    &::before {
+        @include floating-image("../images/patterns/pattern13.svg", ("top": 0, "left": 0), -50%, 200px, 200px);
+
+        @media (width <= 400px) {
+            & {
+                translate: -50% -50%;
+            }
+        }
+    }
+}

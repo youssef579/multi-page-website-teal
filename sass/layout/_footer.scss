@@ -25,10 +25,10 @@ footer {
 
             a:not(:first-child) {
                 align-self: flex-end;
-                margin-right: 20px;
                 font-weight: 600;
                 font-size: 18px;
                 transition: color $duration;
+                width: fit-content;
 
                 &:hover {
                     color: $orange;
@@ -98,8 +98,7 @@ footer {
                 }
 
                 a:nth-child(2) {
-                    text-align: right;
-                    margin: 0;
+                    justify-self: flex-end;
                 }
             }
 
